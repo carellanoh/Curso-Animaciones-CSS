@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(7, 1, 22);
+    counter-reset: game;
+}
+
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    width: 300px;
+    height: 600px;
+    background: rgb(27, 2, 83);
+    box-shadow: 0 19px 38px rgb(85, 84, 84);
+    min-width: 300px;
+}
+
+.moon {
+    height: 70px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+h1, h2{
+    color: rgb(103, 114, 122);
+    position: relative;
+    left: 12px;
+}
+
+.layer-01 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+    25% {
+        bottom: -80px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-01 input[type=checkbox]{
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.layer-02 input[type=checkbox]{
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.layer-04 input[type=checkbox]{
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+.layer-06 input[type=checkbox]{
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+input:checked{
+    counter-increment: game;
+}
+
+.total-count::after {
+    content: counter(game);
+}
+
+
+
+.layer-02 {
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.layer-03 {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    bottom: 0;
+    background: brown;
+    border-top: 10px solid green;
+    border-radius: 8px 8px 0 0;
+}
+.layer-04 {
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 70px;
+    animation-name: layer;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.layer-05 {
+    position: absolute;
+    z-index: 5;
+    width: 180px;
+    height: 300px;
+    bottom: 0;
+    background: rgb(122, 30, 30);
+    border-top: 10px solid green;
+    border-radius: 8px 8px 0 30px;
+}
+.layer-06 {
+    position: absolute;
+    z-index: 6;
+    height: 250px;
+    width: 80px;
+    bottom: 0;
+    right: 30px;
+    animation-name: layer;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.layer-07 {
+    position: absolute;
+    z-index: 7;
+
+    width: 150px;
+    height: 200px;
+    bottom: 0;
+    background: brown;
+    border-top: 10px solid green;
+    border-radius: 8px 8px 30px 0;
+    right: 0px;
+}
+.layer-08 {
+    position: absolute;
+    z-index: 8;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 170px;
+    height: 100px;
+    bottom: 0;
+    background: black;
+    border-radius: 8px 8px 0 0;
+}
+
+.layer-08 img {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.layer-09 {
+    position: absolute;
+    z-index: 9;
+    height: 130px;
+    width: 70px;
+    background: rgb(54, 53, 53);
+    bottom: 0;
+    border-radius: 8px 8px 0 30px;
+}
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    height: 130px;
+    width: 70px;
+    background: rgb(54, 53, 53);
+    bottom: 0;
+    right: 0;
+    border-radius: 8px 8px 30px 0;
+}
+
+
+.left-ear--outer {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #000; 
+    border-right: 40px solid transparent;  
+    position: absolute; 
+    left: 15px;
+}
+
+.right-ear--outer {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #000; 
+    border-left: 40px solid transparent;  
+    position: absolute; 
+    right: 15px;
+}
+
+.head {
+    background: black;
+    border-radius: 50%;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.head__eye {
+    background: orangered;
+    border-radius: 0 70% ;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 5px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 4px;
+    }
+    5% {
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+    10%{
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
+}
+
+.head__eye--left {
+    left: 30px;
+}
+
+.head__eye--right {
+    right: 30px; 
+}
+
+
+footer p {
+    color: white;
+}
